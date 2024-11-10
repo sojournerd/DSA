@@ -3,7 +3,7 @@ package com.java;
 import java.util.Arrays;
 
 
-public class Main {
+public class Quicksort {
     public static void main(String[] args) {
         int[] arr = new int[]{15, 5, 8, 25, 63, 62, 1, 0};
         int len = arr.length;

@@ -5,10 +5,12 @@ import java.util.Arrays;
 
 public class Quicksort {
     public static void main(String[] args) {
-        int[] arr = new int[]{15, 5, 8, 25, 63, 62, 1, 0};
-        int len = arr.length;
+       // empty
+    }
 
-        quicksort(arr, 0, len-1);
+    public static int[] sort(int[] array) {
+        quicksort(array, 0, array.length-1);
+        return array;
     }
 
     public static void quicksort (int[] array, int lowIndex, int highIndex) {

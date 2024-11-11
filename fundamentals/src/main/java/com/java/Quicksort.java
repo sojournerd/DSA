@@ -2,7 +2,6 @@ package com.java;
 
 import java.util.Arrays;
 
-
 public class Quicksort {
     public static void main(String[] args) {
        // empty
@@ -41,7 +40,6 @@ public class Quicksort {
         quicksort(array, lowIndex, lp-1);
         quicksort(array, lp+1, highIndex);
     }
-
 
     private static void swap(int[] array, int index1, int index2) {
 

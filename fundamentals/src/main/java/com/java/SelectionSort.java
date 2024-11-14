@@ -2,17 +2,17 @@ package com.java;
 
 import java.util.Arrays;
 
-public class InsertionSort {
+public class SelectionSort {
        public static void main(String[] args) {
        // empty
     }
 
     public static int[] sort(int[] array) {
-        insertionSort(array);
+        selectionSort(array);
         return array;
     }
 
-    public static void insertionSort (int[] array) {
+    public static void selectionSort (int[] array) {
         if (array.length == 1) return;
         
         for(int i = 0; i < array.length; i++){

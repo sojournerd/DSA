@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import com.java.Quicksort;
 import com.java.Bubblesort;
-import com.java.InsertionSort;
+import com.java.SelectionSort;
 
 public class DSATests {
 
@@ -78,36 +78,36 @@ public class DSATests {
     }
 
     @Test
-    public void insertionsortTest1(){
-        int[] actual = InsertionSort.sort(new int[]{15, 5, 8, 25, 63, 62, 1, 0});
+    public void selectionsortTest1(){
+        int[] actual = SelectionSort.sort(new int[]{15, 5, 8, 25, 63, 62, 1, 0});
         int[] expected = new int[]{0, 1, 5, 8, 15, 25, 62, 63};
         assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void insertionsortTest2(){
-        int[] actual = InsertionSort.sort(new int[]{15, 5, 25, 13, 18, 23, 88, 9});
+    public void selectionsortTest2(){
+        int[] actual = SelectionSort.sort(new int[]{15, 5, 25, 13, 18, 23, 88, 9});
         int[] expected = new int[]{5, 9, 13, 15, 18, 23, 25, 88};
         assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void insertionsortTest3(){
-        int[] actual = InsertionSort.sort(new int[]{3, 105, 2});
+    public void selectionsortTest3(){
+        int[] actual = SelectionSort.sort(new int[]{3, 105, 2});
         int[] expected =  new int[]{2, 3, 105};
         assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void insertionsortTest4(){
-        int[] actual = InsertionSort.sort(new int[]{1});
+    public void selectionsortTest4(){
+        int[] actual = SelectionSort.sort(new int[]{1});
         int[] expected = new int[]{1};
         assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void insertionsortTest5(){
-        int[] actual = InsertionSort.sort(new int[]{});
+    public void selectionsortTest5(){
+        int[] actual = SelectionSort.sort(new int[]{});
         int[] expected = new int[]{};
         assertArrayEquals(expected, actual);
     }

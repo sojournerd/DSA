@@ -1,7 +1,10 @@
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 import com.java.Quicksort;
+import com.java.BinarySearch;
 import com.java.Bubblesort;
 import com.java.SelectionSort;
 import com.java.Mergesort;
@@ -146,6 +149,42 @@ public class DSATests {
         int[] actual = Mergesort.sort(new int[]{});
         int[] expected = new int[]{};
         assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void binarySearchIterativeTest1(){
+        int expected = 5;
+        assertEquals(expected, BinarySearch.binarySearchIterative(new int[]{2, 5, 8, 12, 16, 23, 38, 56, 72, 91}, 23));
+    }
+
+    @Test
+    public void binarySearchIterativeTest2(){
+        int expected = 7;
+        assertEquals(expected, BinarySearch.binarySearchIterative(new int[]{2, 5, 8, 12, 16, 23, 38, 56, 72, 91}, 56));
+    }
+
+    @Test
+    public void binarySearchIterativeTest3(){
+        int expected = 7;
+        assertEquals(expected, BinarySearch.binarySearchIterative(new int[]{2, 5, 8, 12, 16, 23, 38, 56, 72, 91}, 56));
+    }
+
+    @Test
+    public void binarySearchIterativeTest4(){
+        int expected = 0;
+        assertEquals(expected, BinarySearch.binarySearchIterative(new int[]{2, 5, 8, 12, 16, 23, 38, 56, 72, 91}, 2));
+    }
+
+    @Test
+    public void binarySearchIterativeTest5(){
+        int expected = 0;
+        assertEquals(expected, BinarySearch.binarySearchIterative(new int[]{2}, 2), 0);
+    }
+
+    @Test
+    public void binarySearchIterativeTest6(){
+        int expected = -1;
+        assertEquals(expected, BinarySearch.binarySearchIterative(new int[]{}, 2));
     }
 
 }

@@ -178,13 +178,55 @@ public class DSATests {
     @Test
     public void binarySearchIterativeTest5(){
         int expected = 0;
-        assertEquals(expected, BinarySearch.binarySearchIterative(new int[]{2}, 2), 0);
+        assertEquals(expected, BinarySearch.binarySearchIterative(new int[]{2}, 2));
     }
 
     @Test
     public void binarySearchIterativeTest6(){
         int expected = -1;
         assertEquals(expected, BinarySearch.binarySearchIterative(new int[]{}, 2));
+    }
+
+    @Test
+    public void binarySearchRecursiveTest1(){
+        String expected = "{true:0}";
+        int[] arr = new int[]{2,3,4,10,40};
+        assertEquals(expected, BinarySearch.binarySearchRecursive(arr, 2, 0, arr.length-1));
+    }
+
+    @Test
+    public void binarySearchRecursiveTest2(){
+        String expected = "{true:2}";
+        int arr[] = new int[]{2, 5, 8, 12, 16, 23, 38, 56, 72, 91};
+        assertEquals(expected, BinarySearch.binarySearchRecursive(arr, 8, 0, arr.length-1));
+    }
+
+    @Test
+    public void binarySearchRecursiveTest3(){
+        String expected = "{true:6}";
+        int arr[] = new int[]{2, 5, 8, 12, 16, 23, 38, 56, 72, 91};
+        assertEquals(expected, BinarySearch.binarySearchRecursive(arr, 38, 0, arr.length-1));
+    }
+
+    @Test
+    public void binarySearchRecursiveTest4(){
+        String expected = "{false:-1}";
+        int arr[] = new int[]{2, 5, 8, 12, 16, 23, 38, 56, 72, 91};
+        assertEquals(expected, BinarySearch.binarySearchRecursive(arr, 92, 0, 1));
+    }
+ 
+    @Test
+    public void binarySearchRecursiveTest5(){
+        String expected = "{false:-1}";
+        int arr[] = new int[]{};
+        assertEquals(expected, BinarySearch.binarySearchRecursive(arr, 92, 0, 1));
+    }
+ 
+    @Test
+    public void binarySearchRecursiveTest6(){
+        String expected = "{true:1}";
+        int arr[] = new int[]{2, 5};
+        assertEquals(expected, BinarySearch.binarySearchRecursive(arr, 5, 0, 1));
     }
 
 }
